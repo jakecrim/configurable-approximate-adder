@@ -1,0 +1,206 @@
+m255
+K4
+z2
+!s11e vcom 2019.1 2019.01, Jan  2 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/modelsim_dlx64_2019.1/examples
+Eadder2
+Z0 w1617831967
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z3 dC:/Users/jehnk3/Desktop/CAA
+Z4 8C:/Users/jehnk3/Desktop/CAA/adder-2.vhd
+Z5 FC:/Users/jehnk3/Desktop/CAA/adder-2.vhd
+l0
+L4
+VSbX=Bd0adUeK>41EPMKS[0
+!s100 KGXT2EAABHd6=JeLCJ4310
+Z6 OP;C;2019.1;69
+32
+Z7 !s110 1619564066
+!i10b 1
+Z8 !s108 1619564066.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jehnk3/Desktop/CAA/adder-2.vhd|
+Z10 !s107 C:/Users/jehnk3/Desktop/CAA/adder-2.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+DEx4 work 6 adder2 0 22 SbX=Bd0adUeK>41EPMKS[0
+l20
+L11
+VKj6`An>JHFNkd]Dlk]dd23
+!s100 g4WgVH3kCzV[_E;o5gLN73
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eapproxadder
+Z13 w1619564060
+R1
+R2
+R3
+Z14 8C:/Users/jehnk3/Desktop/CAA/AproxAdder.vhd
+Z15 FC:/Users/jehnk3/Desktop/CAA/AproxAdder.vhd
+l0
+L4
+Vzl94]4P@J:Rj5D8c@oPMP3
+!s100 =1az;I8L>1m21QJRR8dil1
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jehnk3/Desktop/CAA/AproxAdder.vhd|
+Z17 !s107 C:/Users/jehnk3/Desktop/CAA/AproxAdder.vhd|
+!i113 1
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 11 approxadder 0 22 zl94]4P@J:Rj5D8c@oPMP3
+l34
+L11
+V>AW4KZO<b;1cM_gMK6:To2
+!s100 1>F=J=7@n_ezjcmhRDAHU2
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Ecarrypredict
+R0
+R1
+R2
+R3
+Z18 8C:/Users/jehnk3/Desktop/CAA/CarryPredict.vhd
+Z19 FC:/Users/jehnk3/Desktop/CAA/CarryPredict.vhd
+l0
+L4
+VoWn=W74hzA?XUJneoRCg32
+!s100 f]JBZj58VH3=DgQBlT4k`0
+R6
+32
+Z20 !s110 1619564067
+!i10b 1
+Z21 !s108 1619564067.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jehnk3/Desktop/CAA/CarryPredict.vhd|
+Z23 !s107 C:/Users/jehnk3/Desktop/CAA/CarryPredict.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 12 carrypredict 0 22 oWn=W74hzA?XUJneoRCg32
+l12
+L10
+Vg8Z6HTaJCeT8G3IMX4Q2_0
+!s100 aO6c`:_B9><<0k]7U4k_E2
+R6
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R11
+R12
+Ecarryselectunit
+Z24 w1619564044
+R1
+R2
+R3
+Z25 8C:/Users/jehnk3/Desktop/CAA/CarrySelectUnit.vhd
+Z26 FC:/Users/jehnk3/Desktop/CAA/CarrySelectUnit.vhd
+l0
+L4
+V<3>k1ZYnlb^Z]72?CWMCm0
+!s100 ZQb@bENba^_0hE]H=E]WZ0
+R6
+32
+R20
+!i10b 1
+R21
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jehnk3/Desktop/CAA/CarrySelectUnit.vhd|
+Z28 !s107 C:/Users/jehnk3/Desktop/CAA/CarrySelectUnit.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 15 carryselectunit 0 22 <3>k1ZYnlb^Z]72?CWMCm0
+l11
+L9
+VzRcXSARkf^IGZNDRL5gIk1
+!s100 aZhz=35hXIR9fO[QRTP?P2
+R6
+32
+R20
+!i10b 1
+R21
+R27
+R28
+!i113 1
+R11
+R12
+Efulladder
+R0
+R1
+R2
+R3
+Z29 8C:/Users/jehnk3/Desktop/CAA/FullAdder.vhd
+Z30 FC:/Users/jehnk3/Desktop/CAA/FullAdder.vhd
+l0
+L4
+V1b5`d999R>1GBfTDA5A6g0
+!s100 OllTSBL5ZKcKz7GEBYHCI2
+R6
+32
+R20
+!i10b 1
+R21
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/jehnk3/Desktop/CAA/FullAdder.vhd|
+Z32 !s107 C:/Users/jehnk3/Desktop/CAA/FullAdder.vhd|
+!i113 1
+R11
+R12
+Astructure
+R1
+R2
+Z33 DEx4 work 9 fulladder 0 22 1b5`d999R>1GBfTDA5A6g0
+l13
+L11
+Z34 Vff9OV<L[G_<7[i4jZjlJ>0
+Z35 !s100 R<V>O;dZcz9MO1RZLYUHZ1
+R6
+32
+R20
+!i10b 1
+R21
+R31
+R32
+!i113 1
+R11
+R12

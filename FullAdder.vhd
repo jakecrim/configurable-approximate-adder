@@ -16,7 +16,6 @@ begin
     -- normal Cout FullAdder
     Cout <= (A and B) or (A and Cin) or (B and Cin);
 
-    -- *Propogate Generate Cout*
 
 end Structure;
 
