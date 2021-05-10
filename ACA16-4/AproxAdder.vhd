@@ -32,11 +32,10 @@ Architecture Structure of ApproxAdder is
             CPredict, BP: out std_logic);
     end component;
     begin
-	G <= A and B;
+        -- Generate
+        G <= A and B;
+    
 	    -- Section 1
-        -- *NOTE* Should C(1) become --> C(?)
-        -- *NOTE* Should CSU1,2 etc lines change any?
-
         SumGenerator1: adder4 port map (A(3 downto 0), B(3 downto 0), Ci, S(3 downto 0), C(0));
         CarryPredict1: CarryPredict port map (A(3 downto 0), B(3 downto 0), CPredict(0), BP(0));
         CSU1: CarrySelectUnit port map ('1', CPredict(0), C(0), BP(0), G(0), Carry(0));

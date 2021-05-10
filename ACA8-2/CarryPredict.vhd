@@ -10,8 +10,8 @@ end CarryPredict;
 architecture behavior of CarryPredict is
 
 begin
-    
     CPredict <= (A(1) and B(1)) or (A(0) and B(0) and (A(1) xor B(1)));
+    -- Product of P's
     BP <= (A(1) xor B(1)) and (A(0) xor B(0));
 
 end behavior;
