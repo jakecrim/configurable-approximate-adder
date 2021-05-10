@@ -5,7 +5,7 @@ In some operations it is more desirable to have a faster and more power efficien
 
 **Instructions to Simulate in ModelSim:**
 
-In modelsim, go to file->open and find the CAA.mpf. (ex: in ACA8-2 open CAA.mpf) then remove all files from project because they have the absolute path rather than the relative path, and then right click -> add to project, and the browse and all the files from that current project directory (ex: all the .vhd files inside of ACA8-2). Then hit the OK button. Then compile all, then go to library, open work, and double click on the testBench entity file to start simulation. Select all items in the object panel, right click, select add wave. Then go to change the run length to 40 ms. Then hit run and get the results.
+In modelsim, go to file->open and find the CAA.mpf. (ex: in ACA8-2 open CAA.mpf), ( Note: you may have to make sure your file explorer is set to look for "All Files (*.*)"), then remove all files from project because they have the absolute path rather than the relative path, and then right click -> add to project, and the browse and all the files from that current project directory (ex: all the .vhd files inside of ACA8-2). Then hit the OK button. Then compile all, then go to library, open work, and double click on the testBench entity file to start simulation. Select all items in the object panel, right click, select add wave. Then go to change the run length to 40 ms. Then hit run and get the results.
 
 ### Inputs to Carry Select Unit (CSU)
 -> Control
