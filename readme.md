@@ -1,27 +1,52 @@
 # Accuracy Configurable Approximate Adder
-This VHDL project aims to create an accuracy configurable approximate adder (ACA) in six different configurations. * MORE TO BE ADDED*
+This VHDL project aims to create an accuracy configurable approximate adder (ACA) in six different configurations. 
+
+In some operations it is more desirable to have a faster and more power efficient algorithm, rather than a perfectly accurate algorithm. One way to speed up the addition process is to predict the values of the carry within the additions. This allows for the higher order bits of the addition to start being calculated before lower order bits have calculated. This project implements one design of an Accuracy Configurable Approximate with a Carry Select Unit (ACA-CSU).
+
+**Instructions to Simulate in ModelSim:**
+
+In modelsim, go to file->open and find the CAA.mpf. (ex: in ACA8-2 open CAA.mpf) then remove all files from project because they have the absolute path rather than the relative path, and then right click -> add to project, and the browse and all the files from that current project directory (ex: all the .vhd files inside of ACA8-2). Then hit the OK button. Then compile all, then go to library, open work, and double click on the testBench entity file to start simulation. Select all items in the object panel, right click, select add wave. Then go to change the run length to 40 ms. Then hit run and get the results.
 
 ### Inputs to Carry Select Unit (CSU)
--> bla
--> bla
--> bla
+-> Control
+-> CPredict
+-> Cout
+-> G
+-> BP
 ### Inputs to Carry Predict
--> bla
--> bla
--> bla
+-> A_i
+-> B_i
+
+
+### Outputs
+When running the test bench, outputs of note are the error, and the count ( C ). Error rate is calculated as:  --> (error / C )
+-> error
+-> C
+
+For normal adder operations, outputs are Sum (S) and Cout (Co):
+-> Co
+-> S
+
 
 ## Folders
 
-* **ACA8-2**: bla bla
+* **ACA8-2**: Configuration for: 8 bits, with prediction every 2 bits
+FILE BREAKDOWN:
+--> ApproxAdder.vhd      // Includes 4 sections, each with a 2 bit full adder, to give us the full 8 bits. Also includes the Carry Predict and Carry Select Units to form the 4 sections. Maps their interactions with one another.
 
-* **ACA8-4**: bla bla
+--> CarryPredict.vhd       // predicts a carry
 
-* **ACA16-2**: bla bla
+--> CarrySelectUnit.vhd    // selects whether to use the predicted carry, or the actual carry from the full adder
 
-* **ACA16-4**: bla bla
+--> FullAdder.vhd   // full adder
 
-* **ACA16-8**: bla bla
+--> adder-2.vhd    // creates the 2 full adders to make a 2-bit full adder
 
-* **ACA32-2**: Currently not working, but project structure for a possible 32 full adder, with 16 blocks, meaning each block is a 2 bit full adder.
-
-* **ACA32-4**: Currently not working, but project structure for a possible 32 full adder, with 8 blocks, meaning each block is a 4 bit full adder.
+* **ACA8-4**:  Configuration for: 8 bits, with prediction every 4 bits 
+(Same file structure)
+* **ACA16-2**:  Configuration for: 16 bits, with prediction every 2 bits
+(Same file structure)
+* **ACA16-4**:  Configuration for: 16 bits, with prediction every 4 bits
+(Same file structure)
+* **ACA16-8**:  Configuration for: 16 bits, with prediction every 8 bits
+(Same file structure)
