@@ -39,11 +39,11 @@ Architecture Structure of ApproxAdder is
 
         SumGenerator1: adder4 port map (A(3 downto 0), B(3 downto 0), Ci, S(3 downto 0), C(0));
         CarryPredict1: CarryPredict port map (A(3 downto 0), B(3 downto 0), CPredict(0), BP(0));
-        CSU1: CarrySelectUnit port map ('0', CPredict(0), C(0), BP(0), G(0), Carry(0));
+        CSU1: CarrySelectUnit port map ('1', CPredict(0), C(0), BP(0), G(0), Carry(0));
     	-- Section 2    
         SumGenerator2: adder4 port map (A(7 downto 4), B(7 downto 4), Carry(0), S(7 downto 4), C(1));
         CarryPredict2: CarryPredict port map (A(7 downto 4), B(7 downto 4), CPredict(1), BP(1));
-        CSU2: CarrySelectUnit port map ('0', CPredict(1), C(1), BP(1), G(1), Carry(1));
+        CSU2: CarrySelectUnit port map ('1', CPredict(1), C(1), BP(1), G(1), Carry(1));
         -- Section 3
         SumGenerator3: adder4 port map (A(11 downto 8), B(11 downto 8), Carry(1), S(11 downto 8), C(2));
         CarryPredict3: CarryPredict port map (A(11 downto 8), B(11 downto 8), CPredict(2), BP(2));

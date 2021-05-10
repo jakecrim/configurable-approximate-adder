@@ -9,11 +9,11 @@ entity ApproxAdder is
 end ApproxAdder;
 
 Architecture Structure of ApproxAdder is
-    signal C: std_logic_vector(2 downto 0);
+    signal C: std_logic;
     signal G: std_logic_vector(7 downto 0);
-    signal Carry: std_logic_vector(2 downto 0);
-    signal CPredict: std_logic_vector(2 downto 0);
-    signal BP: std_logic_vector(2 downto 0);
+    signal Carry: std_logic;
+    signal CPredict: std_logic;
+    signal BP: std_logic;
   
     component adder4
         port(A,B: in std_logic_vector(3 downto 0);
@@ -37,10 +37,10 @@ Architecture Structure of ApproxAdder is
         -- *NOTE* Should CSU1,2 etc lines change any?
 
 	    -- Section 1
-        SumGenerator1: adder4 port map (A(3 downto 0), B(3 downto 0), Ci, S(3 downto 0), C(0));
-        CarryPredict1: CarryPredict port map (A(3 downto 0), B(3 downto 0), CPredict(0), BP(0));
-        CSU1: CarrySelectUnit port map ('0', CPredict(0), C(0), BP(0), G(0), Carry(0));
+        SumGenerator1: adder4 port map (A(3 downto 0), B(3 downto 0), Ci, S(3 downto 0), C);
+        CarryPredict1: CarryPredict port map (A(3 downto 0), B(3 downto 0), CPredict, BP);
+        CSU1: CarrySelectUnit port map ('0', CPredict, C, BP, G(0), Carry);
     	-- Section 2    
-        SumGenerator2: adder4 port map (A(7 downto 4), B(7 downto 4), Carry(0), S(7 downto 4), Co);
+        SumGenerator2: adder4 port map (A(7 downto 4), B(7 downto 4), Carry, S(7 downto 4), Co);
 
 end Structure;

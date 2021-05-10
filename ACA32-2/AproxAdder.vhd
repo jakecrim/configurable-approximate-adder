@@ -9,11 +9,11 @@ entity ApproxAdder is
 end ApproxAdder;
 
 Architecture Structure of ApproxAdder is
-    signal C: std_logic_vector(2 downto 0);
+    signal C: std_logic_vector(14 downto 0);
     signal G: std_logic_vector(31 downto 0);
-    signal Carry: std_logic_vector(2 downto 0);
-    signal CPredict: std_logic_vector(2 downto 0);
-    signal BP: std_logic_vector(2 downto 0);
+    signal Carry: std_logic_vector(14 downto 0);
+    signal CPredict: std_logic_vector(14 downto 0);
+    signal BP: std_logic_vector(14 downto 0);
   
     component adder2
         port(A,B: in std_logic_vector(1 downto 0);
@@ -78,13 +78,13 @@ Architecture Structure of ApproxAdder is
         CarryPredict11: CarryPredict port map (A(21 downto 20), B(21 downto 20), CPredict(10), BP(10));
         CSU11: CarrySelectUnit port map ('0', CPredict(10), C(10), BP(10), G(10), Carry(10));
         -- Section 12
-        SumGenerator22: adder2 port map (A(23 downto 22), B(23 downto 22), Carry(10), S(23 downto 22), C(11));
-        CarryPredict22: CarryPredict port map (A(23 downto 22), B(23 downto 22), CPredict(11), BP(11));
+        SumGenerator12: adder2 port map (A(23 downto 22), B(23 downto 22), Carry(10), S(23 downto 22), C(11));
+        CarryPredict12: CarryPredict port map (A(23 downto 22), B(23 downto 22), CPredict(11), BP(11));
         CSU12: CarrySelectUnit port map ('0', CPredict(11), C(11), BP(11), G(11), Carry(11));
         -- Section 10
-        SumGenerator25: adder2 port map (A(25 downto 24), B(25 downto 24), Carry(11), S(25 downto 24), C(12));
-        CarryPredict25: CarryPredict port map (A(25 downto 24), B(25 downto 24), CPredict(12), BP(12));
-        CSU12: CarrySelectUnit port map ('0', CPredict(12), C(12), BP(12), G(12), Carry(12));
+        SumGenerator13: adder2 port map (A(25 downto 24), B(25 downto 24), Carry(11), S(25 downto 24), C(12));
+        CarryPredict13: CarryPredict port map (A(25 downto 24), B(25 downto 24), CPredict(12), BP(12));
+        CSU13: CarrySelectUnit port map ('0', CPredict(12), C(12), BP(12), G(12), Carry(12));
         -- Section 14
         SumGenerator14: adder2 port map (A(27 downto 26), B(27 downto 26), Carry(12), S(27 downto 26), C(13));
         CarryPredict14: CarryPredict port map (A(27 downto 26), B(27 downto 26), CPredict(13), BP(13));
@@ -95,7 +95,7 @@ Architecture Structure of ApproxAdder is
         CSU15: CarrySelectUnit port map ('0', CPredict(14), C(14), BP(14), G(14), Carry(14));
 
         -- Section 16
-        SumGenerator8: adder2 port map (A(31 downto 30), B(31 downto 30), Carry(14), S(31 downto 30), Co);
+        SumGenerator16: adder2 port map (A(31 downto 30), B(31 downto 30), Carry(14), S(31 downto 30), Co);
 
 
 end Structure;
